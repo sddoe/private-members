@@ -1,4 +1,4 @@
-# Ruby: Enumerables
+# Project: Members Only!
 
 The purpose of this project was to create and implement an exclusive clubhouse where your members can write anonymous posts. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
@@ -13,8 +13,11 @@ To get a local copy of the repository please run the following commands on your 
 
 > 1. git clone git@github.com:sddoe/private-members.git
 > 2. cd into above cloned directory
-> 3. Run command 'rails server' in the terminal
-> 4. Open local server
+> 3. Run command 'npm install --global yarn' to install and upgrade Yarn
+> 4. Run command 'bundle install' to install the necessary dependencies
+> 5. Run command 'rails db:migrate' to setup your local database
+> 6. Run command 'rails server' to start the application
+> 7. Open local server
 
 ## Authors
 
