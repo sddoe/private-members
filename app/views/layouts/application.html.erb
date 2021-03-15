@@ -19,7 +19,13 @@
     <% if flash[:alert] %>
       <p class="alert"><%= alert %></p>
     <% end %>
-    
-    <%= yield %>
+    <% if member_signed_in? %>
+    <% link_to current_member.email, edit_member_registraton_path %>
+    <% link_to 'logout', destroy_member_session_path, method :delete %>
+    <% else %>%
+    <% link_to 'signin',new_member_session_path %>
+    <% link_to 'sign up', new_member_registration_path %>
+    <%= yield%>
+    <% end %>
   </body>
 </html>
