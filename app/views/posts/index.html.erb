@@ -10,17 +10,19 @@
     </tr>
   </thead>
 
+  <%= render 'posts/form' %>
+
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-      <% if member_signed_in? %>
-      <%= post.member.name %>
         <td><%= post.post %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if member_signed_in? %>
+          <td><strong><%= post.member.name %></strong></td>
+          <td><%= link_to 'Show', post %></td>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
-    <% end %>
     <% end %>
   </tbody>
 </table>
