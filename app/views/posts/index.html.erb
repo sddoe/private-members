@@ -14,13 +14,10 @@
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.post %></td>
-        <% if member_signed_in? %>
-          <td><strong><%= post.member.name %></strong></td>
-          <td><%= link_to 'Show', posts_path %></td>
-        <% end %>
-      </tr>
+    <tr>
+      <td><%= post.post %></td>
+      <td><%= show_member_name(post) %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
