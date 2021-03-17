@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Posts</h1>
 
 <table>
@@ -9,8 +7,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
-  <%= render 'posts/form' %>
 
   <tbody>
     <% @posts.each do |post| %>
@@ -22,6 +18,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<%= create_post %>
