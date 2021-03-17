@@ -11,7 +11,11 @@
   </head>
 
   <body>
-    <br/>
-    <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+    <%= show_sign_in_up %>
+
+    <%= yield%>
   </body>
 </html>
