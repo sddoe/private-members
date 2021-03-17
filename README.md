@@ -15,6 +15,7 @@ To get a local copy of the repository please run the following commands on your 
 > 2. cd into above cloned directory
 > 3. Run command 'npm install --global yarn' to install and upgrade Yarn
 > 4. Run command 'bundle install' to install the necessary dependencies
+> 5. Run command 'rails db:create' to create DB
 > 5. Run command 'rails db:migrate' to setup your local database
 > 6. Run command 'rails server' to start the application
 > 7. Open local server
